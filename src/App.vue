@@ -1,6 +1,9 @@
 <template>
   <div>
-    <TreeComponent />
+    <LeftMenu />
+    <section>
+      <TreeComponent />
+    </section>
   </div>
 </template>
 
@@ -11,11 +14,13 @@ export default defineComponent({
   name: "App",
   components: {
     TreeComponent: defineAsyncComponent(() =>
-      import("@/components/TreeComponent.vue")
+      import("@/components/tree/TreeComponent.vue")
     ),
+    LeftMenu: defineAsyncComponent(() => import("@/components/LeftMenu.vue")),
   },
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/assets/scss/index.scss";
 </style>

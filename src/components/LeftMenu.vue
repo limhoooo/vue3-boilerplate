@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="leftMenu">
     <ul>
       <li>Tree</li>
       <li></li>
@@ -12,5 +12,6 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/assets/scss/index.scss";
 </style>

@@ -32,6 +32,7 @@ export default defineComponent({
     TreeCreateModal: defineAsyncComponent(() =>
       import("./TreeCreateModal.vue")
     ),
+
     TreeJsonView: defineAsyncComponent(() => import("./TreeJsonView.vue")),
   },
   setup() {

@@ -10,7 +10,7 @@
         <input
           type="text"
           v-model="treeObj.treeKey"
-          placeholder="Sub Tree Key"
+          placeholder="Sub Tree Key input"
         />
         <button @click="addTreeFnc">추가</button>
         <button @click="$emit('isTreeModalFnc', false)">닫기</button>

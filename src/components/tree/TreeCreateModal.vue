@@ -5,7 +5,7 @@
         <input
           type="text"
           v-model="treeObj.treeName"
-          placeholder="Sub Tree Name"
+          placeholder="Sub Tree Name input"
         />
         <input
           type="text"

@@ -52,11 +52,11 @@ export default defineComponent({
     };
     const validationCheck = (value) => {
       if (!value.treeName) {
-        alert("name 을 입력 해주세요.");
+        alert("name을 입력 해주세요.");
         return true;
       }
       if (!value.treeKey) {
-        alert("Key 을 입력 해주세요.");
+        alert("Key를 입력 해주세요.");
         return true;
       }
     };

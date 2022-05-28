@@ -2,7 +2,7 @@
   <div>
     <div class="tree-btn">
       <button @click="isTreeModalFnc({ flag: true, type: 'null' })">
-        트리생성
+        트리생성.
       </button>
     </div>
     <div class="tree-group-box">

@@ -6,6 +6,7 @@
       </button>
     </div>
     <div class="tree-group-box">
+      <!-- 트리그룹 -->
       <TreeGroup
         :tree="TREE"
         @isTreeModalFnc="isTreeModalFnc"

@@ -2,7 +2,7 @@
   <div class="container">
     <LeftMenu />
     <section>
-      <TreeComponent />
+      <router-view />
     </section>
   </div>
 </template>
@@ -16,7 +16,14 @@ export default defineComponent({
     TreeComponent: defineAsyncComponent(() =>
       import("@/components/tree/TreeComponent.vue")
     ),
-    LeftMenu: defineAsyncComponent(() => import("@/components/LeftMenu.vue")),
+    LeftMenu: defineAsyncComponent(() => import("@/views/LeftMenu.vue")),
+  },
+  setup() {
+    console.log(
+      "%cvue3 보일러플레이트",
+      "background-image: linear-gradient(red, blue); color: white; padding: 5px;"
+    );
+    return {};
   },
 });
 </script>

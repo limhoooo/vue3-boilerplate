@@ -25,7 +25,7 @@ export default {
     const arrayValue = ref([]);
     const addFnc = () => {
       if (arrayValue.value.some((item) => item === inputValue.value))
-        return alert("동일한 tag 가 존재합니다.");
+        return alert("동일한 tag 가 존재합니다");
       arrayValue.value.push(inputValue.value);
       inputValue.value = "";
     };

@@ -5,7 +5,7 @@
         <router-link to="/tree">TreeMenu</router-link>
       </li>
       <li>
-        <router-link to="/tag">Tag</router-link>
+        <router-link to="/tag">TagInput</router-link>
       </li>
       <li>
         <router-link to="/">FilterTab</router-link>

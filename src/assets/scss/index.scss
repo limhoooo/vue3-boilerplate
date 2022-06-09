@@ -1,29 +1,10 @@
-a {
-    color: #333;
-    text-decoration: none;
-}
-
 .container {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-.p-30 {
-    padding: 30px;
-}
-
 .leftMenu {
-    ul {
-        li {
-            padding: 20px 20px 0 20px;
-            list-style: inside;
-
-            a {
-                &:hover {
-                    font-weight: bold;
-                }
-            }
-        }
-    }
+    width: 400px;
+    border: 1px solid;
 }

@@ -1,26 +1,33 @@
 <template>
-  <v-layout>
-    <v-app-bar color="grey-lighten-2"> Boilerplate </v-app-bar>
-    <v-navigation-drawer permanent>
-      <LeftMenu />
-    </v-navigation-drawer>
-    <v-main>
-      <main class="p-30">
-        <router-view />
-      </main>
-    </v-main>
-  </v-layout>
+  <div class="container">
+    <LeftMenu />
+    <section>
+      <router-view />
+    </section>
+  </div>
 </template>
 
 <script>
-import { defineComponent, defineAsyncComponent } from "@vue/runtime-core";
+import { defineAsyncComponent, defineComponent } from "@vue/runtime-core";
 
 export default defineComponent({
+  name: "App",
   components: {
-    LeftMenu: defineAsyncComponent(() => import("./views/LeftMenu.vue")),
+    TreeComponent: defineAsyncComponent(() =>
+      import("@/components/tree/TreeComponent.vue")
+    ),
+    LeftMenu: defineAsyncComponent(() => import("@/views/LeftMenu.vue")),
+  },
+  setup() {
+    console.log(
+      "%cvue3 보일러플레이트",
+      "background-image: linear-gradient(red, blue); color: white; padding: 5px;"
+    );
+    return {};
   },
 });
 </script>
+
 <style lang="scss" scoped>
 @import "@/assets/scss/index.scss";
 </style>

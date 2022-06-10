@@ -2,7 +2,8 @@
   <div>
     <ul class="tagBox">
       <li v-for="item in arrayValue" :key="item" class="tag">
-        {{ item }}<span @click="deleteFnc(item)" class="deleteBtn">x</span>
+        {{ item }}
+        <span @click="deleteFnc(item)" class="deleteBtn">x</span>
       </li>
       <li class="liInput">
         <input
@@ -10,7 +11,7 @@
           type="text"
           v-model="inputValue"
           @keyup.enter="addFnc"
-          placeholder="Tag 를 입력해주세요"
+          placeholder="Tag 를 입력해주세요."
         />
       </li>
     </ul>
@@ -24,6 +25,7 @@ export default {
     const inputValue = ref("");
     const arrayValue = ref([]);
     const addFnc = () => {
+      if (!inputValue.value) return alert("값을 입력해주십시오.");
       if (arrayValue.value.some((item) => item === inputValue.value))
         return alert("동일한 tag 가 존재합니다");
       arrayValue.value.push(inputValue.value);
@@ -57,9 +59,6 @@ export default {
   display: inline-block;
   margin-left: 3px;
   cursor: pointer;
-}
-li {
-  list-style-type: none;
 }
 .treeInput {
   border: none;

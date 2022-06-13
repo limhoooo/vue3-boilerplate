@@ -11,7 +11,7 @@
           type="text"
           v-model="inputValue"
           @keyup.enter="addFnc"
-          placeholder="Tag 를 입력해주세요."
+          placeholder="Tag 를 입력해주세요"
         />
       </li>
     </ul>

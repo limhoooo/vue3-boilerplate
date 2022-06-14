@@ -8,6 +8,9 @@
         <router-link to="/tag">TagInput</router-link>
       </li>
       <li>
+        <router-link to="/drag">drag</router-link>
+      </li>
+      <li>
         <router-link to="/">FilterTab</router-link>
       </li>
     </ul>

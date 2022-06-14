@@ -16,6 +16,12 @@ const routes = [
         name: 'TagComponent',
         component: () => import('@/components/tag/TagComponent.vue'),
     },
+    {
+        path: '/drag',
+        name: 'DragComponent',
+        component: () => import('@/components/drag/DragComponent.vue'),
+    },
+
 ];
 
 export const router = createRouter({

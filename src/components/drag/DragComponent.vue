@@ -1,11 +1,9 @@
 <template>
   <div>
-    <draggable v-model="myList" class="drag">
-      <template v-slot:item="{ item }">
-        <div class="drag-box">
-          {{ item.name }}
-        </div>
-      </template>
+    <draggable :list="myList" class="drag">
+      <div class="drag-box" v-for="item in myList" :key="item" @click="test">
+        {{ item.name }}
+      </div>
     </draggable>
   </div>
   <TreeJsonView :TREE="myList" />
@@ -18,10 +16,10 @@ import {
   defineComponent,
   watch,
 } from "@vue/runtime-core";
-import draggable from "vue3-draggable";
+import { VueDraggableNext } from "vue-draggable-next";
 export default defineComponent({
   components: {
-    draggable,
+    draggable: VueDraggableNext,
     TreeJsonView: defineAsyncComponent(() => import("./DragJosnView.vue")),
   },
   setup() {
@@ -41,7 +39,14 @@ export default defineComponent({
       data.map((item, index) => (item.index = index));
       console.log(myList.value);
     });
-    return { myList };
+    const test = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+      else e.isImmediatePropagationEnabled = false; // IE 대응
+    };
+    return { myList, test };
   },
 });
 </script>

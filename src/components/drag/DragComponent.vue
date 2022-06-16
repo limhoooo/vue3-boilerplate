@@ -1,6 +1,6 @@
 <template>
   <div>
-    <draggable :list="myList" class="drag">
+    <draggable :list="myList" class="drag" @change="test">
       <div class="drag-box" v-for="item in myList" :key="item" @click="test">
         {{ item.name }}
       </div>
@@ -35,16 +35,8 @@ export default defineComponent({
       { name: "9" },
     ]);
 
-    watch(myList, (data) => {
-      data.map((item, index) => (item.index = index));
-      console.log(myList.value);
-    });
     const test = (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-
-      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-      else e.isImmediatePropagationEnabled = false; // IE 대응
+      console.log(myList.value);
     };
     return { myList, test };
   },

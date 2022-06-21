@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 드래그 박스 -->
     <draggable :list="myList" class="drag" @change="test">
       <div class="drag-box" v-for="item in myList" :key="item" @click="test">
         {{ item.name }}

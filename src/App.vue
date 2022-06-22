@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-app-bar color="grey-lighten-2"> Boilerplate </v-app-bar>
+    <v-app-bar color="grey-lighten-2"> Boilerplate!! </v-app-bar>
     <v-navigation-drawer permanent>
       <LeftMenu />
     </v-navigation-drawer>

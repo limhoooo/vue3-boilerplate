@@ -1,11 +1,15 @@
 <template>
   <div>
     <!-- 드래그 박스 -->
-    <draggable :list="myList" class="drag" @change="test">
-      <div class="drag-box" v-for="item in myList" :key="item" @click="test">
-        {{ item.name }}
-      </div>
-    </draggable>
+    <ul>
+      <draggable :list="myList" class="drag" @change="test">
+        <transition-group type="transition" name="flip-list">
+          <li class="drag-box" v-for="item in myList" :key="item" @click="test">
+            {{ item.name }}
+          </li>
+        </transition-group>
+      </draggable>
+    </ul>
   </div>
   <TreeJsonView :TREE="myList" />
 </template>
@@ -60,5 +64,8 @@ export default defineComponent({
   margin-top: 10px;
   margin-right: 10px;
   display: inline-block;
+}
+.flip-list-move {
+  transition: transform 0.5s;
 }
 </style>

@@ -46,6 +46,7 @@ export default defineComponent({
     const isTreeModalFnc = (value) => {
       isModal.value = value.flag;
       type.value = value.type;
+      type.value = value.type;
     };
     const setFocus = (value) => (focus.value = value);
     return {

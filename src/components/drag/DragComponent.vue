@@ -42,6 +42,7 @@ export default defineComponent({
 
     const test = (e) => {
       console.log(myList.value);
+      console.log(myList.value);
     };
     return { myList, test };
   },

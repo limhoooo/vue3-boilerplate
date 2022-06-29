@@ -16,11 +16,7 @@
 
 <script>
 import { ref } from "@vue/reactivity";
-import {
-  defineAsyncComponent,
-  defineComponent,
-  watch,
-} from "@vue/runtime-core";
+import { defineAsyncComponent, defineComponent } from "@vue/runtime-core";
 import { VueDraggableNext } from "vue-draggable-next";
 export default defineComponent({
   components: {

@@ -11,4 +11,3 @@ createApp(App)
   .use(vuetify)
   .use(router)
   .mount('#app')
-aks

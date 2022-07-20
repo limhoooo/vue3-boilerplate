@@ -34,6 +34,10 @@ export default {
     const deleteFnc = (value) => {
       arrayValue.value = arrayValue.value.filter((item) => item != value);
     };
+    const onCreated = () => {
+      console.log("aaa");
+    };
+    onCreated();
     return { inputValue, arrayValue, addFnc, deleteFnc };
   },
 };
